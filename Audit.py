@@ -1,9 +1,9 @@
 # -*- 
-import xml.etree.cElementTree as ET
-from collections import defaultdict
-import re
+import xml.etree.cElementTree as ET      #importing xml.etree.cElementTree module
+from collections import defaultdict       #importing defaultdict from collections
+import re                                # importing regular expression module 're'
 import pprint
-from num2words import num2words
+
 
 OSMFILE = "toronto_canada.osm"
 street_type_re = re.compile(r'\b\S+\.?$', re.IGNORECASE)
@@ -87,7 +87,7 @@ num_line_mapping = {
 def audit_street_type(street_types, street_name):
     m = street_type_re.search(street_name)
     if m:
-        street_type = m.group()
+        streettype = m.group()
         if street_type not in expected:
             street_types[street_type].add(street_name)
 
