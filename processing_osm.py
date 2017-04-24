@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+@User: Vishal Vikram Singh
 
 """
 After auditing is complete the next step is to prepare the data to be inserted into a SQL database.
@@ -392,4 +393,4 @@ def process_map(file_in, validate):
 if __name__ == '__main__':
     # Note: Validation is ~ 10X slower. For the project consider using a small
     # sample of the map when validating.
-    process_map(OSM_PATH, validate=True)                                                                                                                                                                                                     
+    process_map(OSM_PATH, validate=True)
